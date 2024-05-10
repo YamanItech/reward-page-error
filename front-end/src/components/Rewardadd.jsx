@@ -27,81 +27,88 @@ function Rewardadd() {
   const endDate=parsedData.endDate;
   const companyId=parsedData.companyId;
   const categoryId=parseInt(parsedData.selectedCategory);
-  console.log("productName:", productName);
-console.log("Type of productName:", typeof productName);
+//   console.log("productName:", productName);
+// console.log("Type of productName:", typeof productName);
 
-console.log("productDescription:", productDescription);
-console.log("Type of productDescription:", typeof productDescription);
+// console.log("productDescription:", productDescription);
+// console.log("Type of productDescription:", typeof productDescription);
 
-console.log("goal:", goal);
-console.log("Type of goal:", typeof goal);
+// console.log("goal:", goal);
+// console.log("Type of goal:", typeof goal);
 
-console.log("startDate:", startDate);
-console.log("Type of startDate:", typeof startDate);
+// console.log("startDate:", startDate);
+// console.log("Type of startDate:", typeof startDate);
 
-console.log("endDate:", endDate);
-console.log("Type of endDate:", typeof endDate);
+// console.log("endDate:", endDate);
+// console.log("Type of endDate:", typeof endDate);
 
-console.log("companyId:", companyId);
-console.log("Type of companyId:", typeof companyId);
+// console.log("companyId:", companyId);
+// console.log("Type of companyId:", typeof companyId);
 
-console.log("categoryId:", categoryId);
-console.log("Type of categoryId:", typeof categoryId);
+// console.log("categoryId:", categoryId);
+// console.log("Type of categoryId:", typeof categoryId);
 
-console.log("benefit1:", benefit1);
-console.log("Type of benefit1:", typeof benefit1);
+// console.log("benefit1:", benefit1);
+// console.log("Type of benefit1:", typeof benefit1);
 
-console.log("benefit1Description:", benefit1Description);
-console.log("Type of benefit1Description:", typeof benefit1Description);
+// console.log("benefit1Description:", benefit1Description);
+// console.log("Type of benefit1Description:", typeof benefit1Description);
 
-console.log("benefit1Amount:", benefit1Amount);
-console.log("Type of benefit1Amount:", typeof parseInt(benefit1Amount));
+// console.log("benefit1Amount:", benefit1Amount);
+// console.log("Type of benefit1Amount:", typeof parseInt(benefit1Amount));
 
-console.log("benefit2:", benefit2);
-console.log("Type of benefit2:", typeof benefit2);
+// console.log("benefit2:", benefit2);
+// console.log("Type of benefit2:", typeof benefit2);
 
-console.log("benefit2Description:", benefit2Description);
-console.log("Type of benefit2Description:", typeof benefit2Description);
+// console.log("benefit2Description:", benefit2Description);
+// console.log("Type of benefit2Description:", typeof benefit2Description);
 
-console.log("benefit2Amount:", benefit2Amount);
-console.log("Type of benefit2Amount:", typeof parseInt(benefit2Amount));
+// console.log("benefit2Amount:", benefit2Amount);
+// console.log("Type of benefit2Amount:", typeof parseInt(benefit2Amount));
 
-console.log("benefit3:", benefit3);
-console.log("Type of benefit3:", typeof benefit3);
+// console.log("benefit3:", benefit3);
+// console.log("Type of benefit3:", typeof benefit3);
 
-console.log("benefit3Description:", benefit3Description);
-console.log("Type of benefit3Description:", typeof benefit3Description);
+// console.log("benefit3Description:", benefit3Description);
+// console.log("Type of benefit3Description:", typeof benefit3Description);
 
-console.log("benefit3Amount:", parseInt(benefit3Amount));
-console.log("Type of benefit3Amount:", typeof parseInt(benefit3Amount));
+// console.log("benefit3Amount:", parseInt(benefit3Amount));
+// console.log("Type of benefit3Amount:", typeof parseInt(benefit3Amount));
 
 const postData = {
-      productName: "adfdfdfd",
-      productDescription: "Description",
-      productGoal: 30000,
-      startDate: "2024-09-15",
-      endDate: "2024-10-16",
+      productName: productName,
+      productDescription: productDescription,
+      productGoal: goal,
+      startDate: startDate,
+      endDate: endDate,
       benefits: [
         {
-          benefitName: "Benefit 1",
-          benefitDescription: "Benefit Description 1",
+          benefitName: benefit1,
+          benefitDescription: benefit1Description,
           price: {
-            amount: 100
+            amount: parseInt(benefit1Amount)
           }
         },
         {
-          benefitName: "Benefit 2",
-          benefitDescription: "Benefit Description 2",
+          benefitName: benefit2,
+          benefitDescription: benefit2Description,
           price: {
-            amount: 150
+            amount: parseInt(benefit2Amount)
           }
-        }
+        },
+        {
+          benefitName: benefit3,
+          benefitDescription: benefit3Description,
+          price: {
+            amount: parseInt(benefit3Amount)
+          }
+        },
       ],
       category: {
-        categoryId: 1
+        categoryId: categoryId
       },
       company: {
-        companyId: 1
+        companyId: companyId
       }
     };
     
@@ -120,6 +127,7 @@ const postData = {
       benefit3Description !== "" &&
       benefit3Amount !== ""
     ) {
+      console.log("Request Payload:", postData); // Log the postData object before making the request
       makeRequest(postData);
     } else {
       console.error("Please fill in all fields.");
