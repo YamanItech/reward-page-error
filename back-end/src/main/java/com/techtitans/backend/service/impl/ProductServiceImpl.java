@@ -199,8 +199,6 @@ public class ProductServiceImpl implements ProductService {
                 !Validation.isDescriptionValid(productRequestDto.getProductDescription()) ||
                 !Validation.isAmountValid(productRequestDto.getCurrentAmount()) ||
                 !Validation.isGoalValid(productRequestDto.getProductGoal()) ||
-                !Validation.isDateValid(productRequestDto.getStartDate()) ||
-                !Validation.isDateValid(productRequestDto.getEndDate()) ||
                 !Validation.isDateValid(productRequestDto.getStartDate(), productRequestDto.getEndDate())
         ) {
             throw new ValidationException("Validation error");
