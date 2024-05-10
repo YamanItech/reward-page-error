@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200,300,400,500,600,700&display=swap');
+:root {
+  --header-color: #0F2923!important;
+  --footer-color:#F7F7F8 !important;
+  --button-color: #3F51B5 !important;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  font-family: "Oswald", sans-serif;
+}
+.form-control:focus {
+  border-color: #070984 !important;
+  box-shadow: 0 0 5px #070984 !important;
+}
+p {
+  font-family: "Lato", sans-serif;
+}
+.nbar{
+  margin-top: 75px !important;
+  background-color: var(--header-color);
+}
+.card {
+  width: 300px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .2), 0 0 6px rgba(0, 0, 0, .1);
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .3), 0 4px 8px rgba(0, 0, 0, .15);
+}
+.line{
+  width: 60px;
+  background-color: #fff !important;
+  height: 2px ;
+}
+.card h3 {
+  font-weight: 600;
+}
+
+.preview1-text,
+.preview-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+
+.cat {
+  background-color: #e27d5f;
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 45%;
+    position: relative;
+    left: -33px;
+
+  }
+
+  .bug {
+    padding-bottom: 75px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .logo {
+    width: 25%;
+    position: relative;
+    left: 100px;
+  }
+
+  .bug {
+    padding-bottom: 30px;
+  }
+
+}
+
+li {
+  list-style: none;
+}
+
+ul a {
+  color: #fff;
+  text-decoration: none;
+}
+ul a.active {
+  color: #8AF135 !important;
+}
+
+/* for Detail page */
+.img-100 {
+  height:290px;
+}
+.progress-color{
+  background-color: var(--button-color);
+}
+.backProject{
+  background-color: var(--button-color) !important;
+  height: 45px;
+  width: 200px;
+}
+.backProject:hover{
+  background-color: #040404 !important;
+  transition:background-color 1s ease;
+  cursor: pointer;
+}
+.detailcolor{
+  color: var(--button-color);
+}
+/* loading css */
+.detail-img{
+  width: 400px;
+  height: 500px;
+}
+/*detail css*/
+
+/* .modal-title{
+  padding-left: 120px;
+} */
+.contribution{
+  border: 1px solid rgb(42, 119, 195);
+}
+.no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.no-arrows:hover{
+  border: 2px solid var(--button-color) !important;
+  cursor: pointer;
+}
+.no-arrows:focus{
+  border-color: #3314b3 !important; 
+  outline: none !important; 
+  box-shadow: 0 0 5px #6f35dc !important;
+
+}
+.continueBtn{
+  background-color: var(--button-color);
+  border-radius: 9px  !important;
+  height: 35px;
+  width: 170px !important;
+}
+.continueBtn:hover{
+  
+  background-color: #191818 !important;
+  transition:background-color 1s ease;
+  cursor: pointer;
+}
+.continueBtn1{
+  background-color: var(--button-color) !important;
+  height: 37px;
+  width: 100px;
+}
+.continueBtn1:hover{
+  background-color: #191818 !important;
+  transition:background-color 1s ease;
+  cursor: pointer;
+}
+.addproduct:hover{
+  border: 1.5px solid #0f147f;
+  cursor: pointer;
+}
+.addproduct:focus{
+  border-color: #260aa2 !important; 
+  outline: none !important; 
+  box-shadow: 0 0 5px #1616dd !important;
+}
+.active{
+  color: green !important;
+}
+.Addimage{
+  width: 350px;
+  height: auto;
+  padding-bottom: 10px;
+  background-color: #CBDCE1;
+  border: 2px dashed rgb(17, 193, 94);
+}

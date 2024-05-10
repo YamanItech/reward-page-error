@@ -1,0 +1,8 @@
+#login .vh-100 {
+  height: 100vh;
+}
+
+#login .bg-body-tertiary {
+  padding: 10px; 
+  margin: 10px; 
+}
